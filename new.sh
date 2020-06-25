@@ -92,25 +92,25 @@ apt-get -y install neofetch
 cd
 echo "clear" >> .profile
 echo "neofetch" >> .profile
-echo "echo by Horasss" >> .profile
+echo "echo by Daeng Server Group" >> .profile
 
 # install webserver
 cd
 rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
-wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/marloxxx/install/master/nginx.conf"
+wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/daenghunter/install/master/nginx.conf"
 mkdir -p /home/vps/public_html
-echo "<pre>Setup by Horasss</pre>" > /home/vps/public_html/index.html
-wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/marloxxx/install/master/vps.conf"
+echo "<pre>Setup by Daeng Server Group</pre>" > /home/vps/public_html/index.html
+wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/daenghunter/install/master/vps.conf"
 
 # install badvpn
 cd
-wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/marloxxx/install/master/badvpn-udpgw64"
+wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/daenghunter/install/master/badvpn-udpgw64"
 sed -i '$ i\screen -AmdS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7300 --max-clients 500' /etc/rc.local
 chmod +x /usr/bin/badvpn-udpgw
 screen -AmdS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7300 --max-clients 500
 cd
-wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/marloxxx/install/master/badvpn-udpgw64"
+wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/daenghunter/install/master/badvpn-udpgw64"
 sed -i '$ i\screen -AmdS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7200 --max-clients 500' /etc/rc.local
 chmod +x /usr/bin/badvpn-udpgw
 screen -AmdS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7200 --max-clients 500
@@ -130,7 +130,7 @@ echo "/usr/sbin/nologin" >> /etc/shells
 # install squid
 cd
 apt-get -y install squid3
-wget -O /etc/squid/squid.conf "https://raw.githubusercontent.com/marloxxx/install/master/squid3.conf"
+wget -O /etc/squid/squid.conf "https://raw.githubusercontent.com/daenghunter/install/master/squid3.conf"
 sed -i $MYIP2 /etc/squid/squid.conf
 
 # setting vnstat
@@ -168,7 +168,7 @@ connect = 127.0.0.1:109
 END
 
 # make a certificate
-wget -O /etc/stunnel/stunnel.pem "https://raw.githubusercontent.com/marloxxx/install/master/stunnel.pem.crt"
+wget -O /etc/stunnel/stunnel.pem "https://raw.githubusercontent.com/daenghunter/install/master/stunnel.pem.crt"
 
 # konfigurasi stunnel
 sed -i 's/ENABLED=0/ENABLED=1/g' /etc/default/stunnel4
@@ -205,7 +205,7 @@ echo 'Config file is at /usr/local/ddos/ddos.conf'
 echo 'Please send in your comments and/or suggestions to zaf@vsnl.com'
 
 # Save & restore IPTABLES
-#wget -O /etc/iptables.up.rules "https://raw.githubusercontent.com/marloxxx/centos6/master/iptables.up.rules"
+#wget -O /etc/iptables.up.rules "https://raw.githubusercontent.com/daenghunter/centos6/master/iptables.up.rules"
 #sed -i '$ i\iptables-restore < /etc/iptables.up.rules' /etc/rc.local
 #sed -i '$ i\iptables-restore < /etc/iptables.up.rules' /etc/rc.d/rc.local
 #MYIP=`curl icanhazip.com`;
@@ -221,7 +221,7 @@ echo 'Please send in your comments and/or suggestions to zaf@vsnl.com'
 #cd
 
 #security limite login 
-#wget -O /etc/security/limits.conf "https://raw.githubusercontent.com/marloxxx/centos6/master/limits.conf"
+#wget -O /etc/security/limits.conf "https://raw.githubusercontent.com/daenghunter/centos6/master/limits.conf"
 #chmod +x /etc/security/limits.conf
 
 # limite login
@@ -254,23 +254,23 @@ apt-get install -y libxml-parser-perl
 #iptables -A FORWARD -m string --algo bm --string "info_hash" -j DROP
 
 # banner /etc/issue.net
-wget -O /etc/issue.net "https://raw.githubusercontent.com/marloxxx/install/master/issue.net"
+wget -O /etc/issue.net "https://raw.githubusercontent.com/daenghunter/install/master/issue.net"
 sed -i 's@#Banner@Banner@g' /etc/ssh/sshd_config
 sed -i 's@DROPBEAR_BANNER=""@DROPBEAR_BANNER="/etc/issue.net"@g' /etc/default/dropbear
 
 # download script
 cd /usr/bin
-wget -O menu "https://raw.githubusercontent.com/marloxxx/install/master/menu.sh"
-wget -O usernew "https://raw.githubusercontent.com/marloxxx/install/master/usernew.sh"
-wget -O trial "https://raw.githubusercontent.com/marloxxx/install/master/trial.sh"
-wget -O hapus "https://raw.githubusercontent.com/marloxxx/install/master/hapus.sh"
-wget -O member "https://raw.githubusercontent.com/marloxxx/install/master/member.sh"
-wget -O delete "https://raw.githubusercontent.com/marloxxx/install/master/delete.sh"
-wget -O cek "https://raw.githubusercontent.com/marloxxx/install/master/cek.sh"
-wget -O restart "https://raw.githubusercontent.com/marloxxx/install/master/restart.sh"
-wget -O speedtest "https://raw.githubusercontent.com/marloxxx/install/master/speedtest_cli.py"
-wget -O info "https://raw.githubusercontent.com/marloxxx/install/master/info.sh"
-wget -O about "https://raw.githubusercontent.com/marloxxx/install/master/about.sh"
+wget -O menu "https://raw.githubusercontent.com/daenghunter/install/master/menu.sh"
+wget -O usernew "https://raw.githubusercontent.com/daenghunter/install/master/usernew.sh"
+wget -O trial "https://raw.githubusercontent.com/daenghunter/install/master/trial.sh"
+wget -O hapus "https://raw.githubusercontent.com/daenghunter/install/master/hapus.sh"
+wget -O member "https://raw.githubusercontent.com/daenghunter/install/master/member.sh"
+wget -O delete "https://raw.githubusercontent.com/daenghunter/install/master/delete.sh"
+wget -O cek "https://raw.githubusercontent.com/daenghunter/install/master/cek.sh"
+wget -O restart "https://raw.githubusercontent.com/daenghunter/install/master/restart.sh"
+wget -O speedtest "https://raw.githubusercontent.com/daenghunter/install/master/speedtest_cli.py"
+wget -O info "https://raw.githubusercontent.com/daenghunter/install/master/info.sh"
+wget -O about "https://raw.githubusercontent.com/daenghunter/install/master/about.sh"
 
 echo "0 0 * * * root /sbin/reboot" > /etc/cron.d/reboot
 
@@ -351,7 +351,7 @@ echo "Webmin   : http://$MYIP:10000/"  | tee -a log-install.txt
 echo "Timezone : Asia/Jakarta (GMT +7)"  | tee -a log-install.txt
 echo "IPv6     : [off]"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
-echo "Original Script by Horas"  | tee -a log-install.txt
+echo "Original Script by daenghunter"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "Installation Log --> /root/log-install.txt"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
