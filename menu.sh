@@ -1,6 +1,6 @@
 #!/bin/bash
 #Menu
-
+echo -e "••••••••••••••••••••••••••••••••••••"
 echo -e "* menu      : menampilkan daftar perintah"
 echo -e "* usernew   : membuat akun SSH & OpenVPN"
 echo -e "* trial     : membuat akun trial"
@@ -15,6 +15,7 @@ echo -e "* speedtest : speedtest VPS"
 echo -e "* info      : menampilkan informasi sistem"
 echo -e "* about     : info script auto install"
 echo -e "* exit      : keluar dari Putty/Connecbot/"
-echo -e "              JuiceSSH"
-echo -e "By Daeng Server Group"
+echo -e "                 JuiceSSH"
+echo -e "••••••••••••••••••••••••••••••••••••"
+echo -e "Copyright © Daeng Server"
 echo -e ""
