@@ -1,8 +1,8 @@
 #!/bin/bash
 
-echo "-------------------------------"
+echo -e "••••••••••••••••••••••••••••••••"
 echo "USERNAME          EXP DATE     "
-echo "-------------------------------"
+echo -e "••••••••••••••••••••••••••••••••"
 while read expired
 do
         AKUN="$(echo $expired | cut -d: -f1)"
@@ -13,7 +13,7 @@ do
         fi
 done < /etc/passwd
 JUMLAH="$(awk -F: '$3 >= 1000 && $1 != "nobody" {print $1}' /etc/passwd | wc -l)"
-echo "-------------------------------"
+echo -e "••••••••••••••••••••••••••••••••"
 echo "Jumlah akun: $JUMLAH user"
-echo "-------------------------------"
-echo -e "Daeng Server Group"
+echo -e "••••••••••••••••••••••••••••••••"
+echo -e "Copyright © Daeng Server"
