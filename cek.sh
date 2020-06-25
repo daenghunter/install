@@ -2,9 +2,9 @@
 
 data=( `ps aux | grep -i dropbear | awk '{print $2}'`);
 
-echo "-----------------------";
+echo -e "••••••••••••••••••••••••••••••••"
 echo "Checking Dropbear login";
-echo "-----------------------";
+echo -e "••••••••••••••••••••••••••••••••"
 
 for PID in "${data[@]}"
 do
@@ -21,9 +21,9 @@ echo "";
 
 data=( `ps aux | grep "\[priv\]" | sort -k 72 | awk '{print $2}'`);
 
-echo "----------------------";
+echo -e "••••••••••••••••••••••••••••••••"
 echo "Checking OpenSSH login";
-echo "----------------------";
+echo -e "••••••••••••••••••••••••••••••••"
 
 for PID in "${data[@]}"
 do
@@ -38,10 +38,9 @@ done
 
 echo "";
 
-echo "------------------------------------------------"
+echo -e "••••••••••••••••••••••••••••••••"
 echo " Multi Login = kill "
 echo " Cara pakai : kill [nombor PID] "
-echo "------------------------------------------------"
-
-echo " By DAENG SSH"
+echo -e "••••••••••••••••••••••••••••••••"
+echo "Copyright © Daeng Server"
 echo "";
