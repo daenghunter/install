@@ -101,7 +101,7 @@ apt-get -y install neofetch
 cd
 echo "clear" >> .profile
 echo "neofetch" >> .profile
-echo "echo Owner • Daeng Server" >> .profile
+echo "echo Copyright © Daeng Server" >> .profile
 
 # install webserver
 cd
